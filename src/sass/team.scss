@@ -1,11 +1,11 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixin";
+@use "abstracts/variables" as *;
+@use "abstracts/mixin";
 
-@use "../base/normalise";
-@use "../base/basics";
-@use "../base/fonts";
+@use "base/normalise";
+@use "base/basics";
+@use "base/fonts";
 
-@use "../components/burger";
+@use "components/burger";
 
 .header {
   padding: 0 160px;
