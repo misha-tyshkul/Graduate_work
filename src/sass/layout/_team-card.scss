@@ -1,0 +1,75 @@
+@use "../abstracts/variables" as *;
+@use "../base/basics" as *;
+@use "../abstracts/mixin" as *;
+
+.team-card {
+  padding: 80px 160px 60px;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    background: $color-bg;
+    border-radius: 12px;
+  }
+
+  &__wrap {
+    border-radius: 12px 0px 0px 12px;
+    overflow: hidden;
+
+    &__img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    padding: 30px;
+
+    &-link {
+      @include link;
+      margin-bottom: 5px;
+    }
+
+    &-title {
+      @include h2;
+      margin-bottom: 30px;
+    }
+
+    &__name {
+      display: block;
+      font-weight: 700;
+      color: $color-bg-text;
+      margin-bottom: 6px;
+    }
+
+    &__position {
+      font-weight: 400;
+      font-size: 0.667rem;
+      line-height: 22px;
+      color: $color-bg-text;
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .team-card {
+    padding: 80px 60px 60px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .team-card__container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .team-card {
+    padding: 80px 30px 60px;
+  }
+
+  .team-card__content-title {
+    font-size: 1.429rem;
+    line-height: 37px;
+  }
+}

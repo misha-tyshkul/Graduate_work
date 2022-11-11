@@ -1,0 +1,91 @@
+@use "../abstracts/variables" as *;
+@use "../base/basics" as *;
+
+.clients {
+  padding: 0 100px;
+
+  &__title {
+    font-size: 0.667rem;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-main-regular;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 60px;
+
+    &-wrap {
+      display: flex;
+      height: 120px;
+      align-items: center;
+      justify-content: center;
+
+      &.first {
+        background-color: #1c4280;
+      }
+      &.second {
+        background-color: #143646;
+      }
+      &.third {
+        background-color: #f48b30;
+      }
+      &.fouth {
+        background-color: #9e4dc3;
+      }
+      &.fifth {
+        background-color: #fd9339;
+      }
+      &.sixth {
+        background-color: #e2e2e4;
+      }
+      &.seventh {
+        background-color: #c71c36;
+      }
+      &.eighth {
+        background-color: #dcf3f9;
+      }
+      &.ninth {
+        background-color: #eaeaea;
+      }
+      &.tenth {
+        background-color: #282240;
+      }
+      &.eleventh {
+        background-color: #1d4568;
+      }
+      &.twelfth {
+        background-color: #000000;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .clients {
+    padding: 0;
+
+    &__item {
+      border-radius: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .clients__item {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .clients__item {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

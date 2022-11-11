@@ -1,0 +1,65 @@
+@use "../abstracts/variables" as *;
+@use "../base/basics" as *;
+
+.burger-wrap {
+  position: relative;
+  display: none;
+  padding: 64px 12px 12px 12px;
+  margin: 0;
+  background: #ffffff;
+  border-radius: 12px 12px 0px 0px;
+  grid-area: burger;
+
+  &.is-shown {
+    display: block;
+  }
+
+  .burger-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+  }
+
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .burger-item {
+      display: flex;
+      justify-content: center;
+      background: $color-bg;
+      border-radius: 12px;
+
+      &:active {
+        background-color: $color-bg-separator;
+      }
+    }
+
+    .burger-link {
+      display: inline-block;
+      color: $color-active-regular;
+      font-size: 1.143rem;
+      line-height: 29px;
+      padding: 7px 0;
+    }
+  }
+}
+
+.burger {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  &-icon {
+    width: 100%;
+
+    &:active {
+      background-color: $color-bg-separator;
+      border-radius: 8px;
+    }
+  }
+}

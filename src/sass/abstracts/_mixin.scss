@@ -1,0 +1,23 @@
+@use "_variables" as *;
+@use "../base/basics";
+
+@mixin link {
+  font-size: 0.667rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $color-active-regular;
+
+  &:hover {
+    color: $color-accent;
+    cursor: pointer;
+  }
+}
+
+@mixin h2 {
+  font-size: 1.81rem;
+  line-height: 46px;
+  font-weight: 700;
+  background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

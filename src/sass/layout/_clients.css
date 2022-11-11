@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as *;
+@use "../base/basics" as *;
+.clients {
+  padding: 0 100px;
+}
+
+.clients__title {
+  font-size: 0.667rem;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

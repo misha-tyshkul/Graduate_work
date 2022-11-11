@@ -1,0 +1,182 @@
+@use "../abstracts/variables" as *;
+@use "../base/basics" as *;
+
+.footer {
+  background: $color-bg;
+  padding: 30px 160px;
+
+  &-container {
+    display: grid;
+    grid-template-areas:
+      "map copyright"
+      "links copyright";
+    row-gap: 20px;
+    padding-top: 30px;
+    border-top: 2px solid $color-bg-separator;
+    justify-content: space-between;
+  }
+
+  &-locations {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    grid-area: map;
+
+    &__adress {
+      font-weight: 400;
+      font-size: 0.762rem;
+      line-height: 20px;
+      color: $color-main-regular;
+    }
+
+    &__link {
+      font-size: 0.571rem;
+      line-height: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color-active-regular;
+
+      &:hover {
+        color: $color-accent;
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 6px;
+        width: 6px;
+        background-color: $color-bg-text;
+        border-radius: 50%;
+        margin-right: 10px;
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  &-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    grid-area: links;
+    font-size: 0.762rem;
+    line-height: 20px;
+
+    &__link svg:hover #facebook {
+      fill: $color-accent;
+    }
+
+    &__tell {
+      color: $color-main-alt;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 6px;
+        width: 6px;
+        background-color: $color-bg-text;
+        border-radius: 50%;
+        margin-right: 10px;
+        margin-bottom: 2px;
+      }
+    }
+
+    &__mail {
+      color: $color-active-regular;
+
+      &:hover {
+        color: $color-accent;
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 6px;
+        width: 6px;
+        background-color: $color-bg-text;
+        border-radius: 50%;
+        margin-right: 10px;
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  &-copyright {
+    grid-area: copyright;
+
+    &__text {
+      font-weight: 400;
+      font-size: 0.762rem;
+      line-height: 20px;
+      color: $color-bg-text;
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .footer {
+    padding: 30px 60px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .footer-container {
+    grid-template-areas:
+      "map copyright"
+      "links links";
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .clients__item-wrap.seventh {
+    display: none;
+  }
+  .clients__item-wrap.eighth {
+    display: none;
+  }
+  .clients__item-wrap.ninth {
+    display: none;
+  }
+  .clients__item-wrap.tenth {
+    display: none;
+  }
+  .clients__item-wrap.eleventh {
+    display: none;
+  }
+  .clients__item-wrap.twelfth {
+    display: none;
+  }
+
+  .footer {
+    padding: 30px 30px;
+  }
+
+  .footer-container {
+    grid-template-areas:
+      "map"
+      "links"
+      "copyright";
+    justify-content: center;
+  }
+
+  .footer-locations {
+    flex-direction: column;
+  }
+
+  .footer-items {
+    flex-direction: column;
+  }
+
+  .footer-locations__link::before {
+    content: none;
+  }
+
+  .footer-items__tell::before {
+    content: none;
+  }
+
+  .footer-items__mail::before {
+    content: none;
+  }
+}

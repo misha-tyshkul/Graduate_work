@@ -1,0 +1,9 @@
+@use "../abstracts/variables" as *;
+@use "../base/basics" as *;
+.service {
+  padding: 0 160px 0;
+}
+
+.service .service-desc {
+  font-size: 0.762rem;
+}

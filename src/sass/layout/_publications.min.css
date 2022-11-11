@@ -1,0 +1,1 @@
+@use "../abstracts/variables" as *;@use "../base/basics" as *;@use "../abstracts/mixin" as *;.publications{padding:30px 160px}

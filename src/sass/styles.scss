@@ -1,0 +1,16 @@
+@use "base/normalise" as *;
+@use "base/basics" as *;
+@use "base/fonts" as *;
+
+@use "abstracts/variables" as *;
+@use "abstracts/mixin" as *;
+
+@use "components/burger" as *;
+
+@use "layout/header.scss" as *;
+@use "layout/experience.scss" as *;
+@use "layout/service.scss" as *;
+@use "layout/team-card" as *;
+@use "layout/clients" as *;
+@use "layout/publications" as *;
+@use "layout/footer" as *;

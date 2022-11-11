@@ -1,0 +1,83 @@
+@use "../abstracts/variables" as *;
+@use "../base/basics" as *;
+@use "../abstracts/mixin" as *;
+
+.service {
+  padding: 0 160px 60px;
+
+  .service__title {
+    @include link;
+    margin-bottom: 10px;
+  }
+
+  .service__text {
+    @include h2;
+  }
+
+  .service-container {
+    display: grid;
+    gap: 60px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 60px;
+
+    &__item {
+      display: grid;
+      gap: 10px;
+      grid-template-rows: auto auto 1fr;
+    }
+    &__icon {
+      background: white;
+      padding: 14px;
+      border-radius: 20%;
+    }
+
+    &__title {
+      font-size: 1.048rem;
+      font-weight: 700;
+      line-height: 27px;
+      color: $color-active-regular;
+      margin-top: 30px;
+      margin-bottom: 15px;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+
+    &__text {
+      font-size: 0.762rem;
+      line-height: 26px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .service {
+    padding: 0 60px 60px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .service {
+    padding: 0 60px 60px;
+  }
+
+  .service .service-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .service {
+    padding: 0 60px 30px;
+  }
+
+  .service__text {
+    font-size: 1.429rem;
+    line-height: 37px;
+  }
+
+  .service .service-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
