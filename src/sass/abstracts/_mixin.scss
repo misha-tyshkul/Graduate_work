@@ -1,4 +1,4 @@
-@use "_variables" as *;
+@use "variables" as *;
 @use "../base/basics";
 
 @mixin link {
@@ -20,4 +20,9 @@
   background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@mixin vector {
+  width: 12px;
+  height: 12px;
 }

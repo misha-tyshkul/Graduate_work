@@ -1,6 +1,7 @@
 @use "../abstracts/variables" as *;
 @use "../base/basics";
 @use "../components/burger";
+@use "../abstracts/mixin";
 
 .header-container {
   position: relative;
@@ -135,6 +136,7 @@
           width: 6px;
           background-color: $color-bg-separator;
           border-radius: 50%;
+          margin-right: 6px;
           margin-bottom: 3px;
         }
       }
@@ -150,6 +152,7 @@
         width: 6px;
         background-color: $color-bg-separator;
         border-radius: 50%;
+        margin-right: 6px;
         margin-bottom: 3px;
       }
 
@@ -164,6 +167,7 @@
         width: 6px;
         background-color: $color-bg-separator;
         border-radius: 50%;
+        margin-right: 6px;
         margin-bottom: 7px;
       }
 

@@ -1,5 +1,5 @@
 @use "../abstracts/variables" as *;
-@use "../base/basics" as *;
+@use "../base/basics";
 
 .footer {
   background: $color-bg;
@@ -63,7 +63,7 @@
     font-size: 0.762rem;
     line-height: 20px;
 
-    &__link svg:hover #facebook {
+    &__link svg:hover #icon-facebook {
       fill: $color-accent;
     }
 
