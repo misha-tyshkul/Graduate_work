@@ -4,6 +4,7 @@
 
 .service {
   padding: 0 160px 60px;
+  position: relative;
 
   .service__title {
     @include link;
@@ -39,10 +40,6 @@
       margin-top: 30px;
       margin-bottom: 15px;
 
-      // .vector {
-      //   @include vector;
-      // }
-
       &:hover #vector {
         color: $color-accent;
       }
@@ -73,15 +70,17 @@
 
 @media only screen and (max-width: 768px) {
   .service {
-    padding: 0 60px 30px;
+    padding: 0 30px 30px;
   }
 
-  .service__text {
+  .service .service__text {
     font-size: 1.429rem;
     line-height: 37px;
   }
 
   .service .service-container {
+    margin-top: 30px;
     grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
   }
 }

@@ -28,6 +28,7 @@
 
     &__img {
       height: 100%;
+      width: 100%;
       object-fit: cover;
     }
   }
@@ -71,11 +72,15 @@
   .team-card__container {
     flex-direction: column;
   }
+
+  .team-card__wrap {
+    border-radius: 12px 12px 0 0;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   .team-card {
-    padding: 80px 30px 60px;
+    padding: 30px 30px 60px;
   }
 
   .team-card__content-title {

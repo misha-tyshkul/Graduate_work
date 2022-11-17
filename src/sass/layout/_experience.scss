@@ -73,15 +73,20 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .experience {
+    padding: 30px 30px;
+  }
+
   .experience__container {
     flex-flow: row wrap;
+    gap: 30px;
   }
 
   .experience-list {
     border-bottom: 4px solid rgba(255, 255, 255, 0.3019607843);
     border-right: 0;
     padding-right: 0;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     width: 100%;
 
     &__menu {

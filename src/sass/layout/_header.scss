@@ -1,17 +1,18 @@
 @use "../abstracts/variables" as *;
+
 @use "../base/basics";
 @use "../components/burger";
-@use "../abstracts/mixin";
 
 .header-container {
   position: relative;
   background: $color-gradient-supersoft;
   border-radius: 0px 0px 12px 12px;
   color: white;
-  overflow: hidden;
+  overflow-x: hidden;
 
   &::before {
     position: absolute;
+    content: "";
     height: 10px;
     bottom: -10px;
     left: 50%;
@@ -19,12 +20,12 @@
     transform: translateX(-50%);
 
     border-radius: 0px 0px 12px 12px;
-    content: "";
     background-color: #cacadb;
   }
 
   &::after {
     position: absolute;
+    content: "";
     height: 10px;
     bottom: -20px;
     left: 50%;
@@ -32,7 +33,6 @@
     transform: translateX(-50%);
 
     border-radius: 0px 0px 12px 12px;
-    content: "";
     background-color: #e7e7f2;
   }
 
@@ -41,7 +41,6 @@
     height: 100vh;
     padding: 0 160px;
     margin: 0 auto;
-    z-index: 1;
 
     &__btn-scroll {
       position: absolute;
@@ -250,13 +249,12 @@
     .header-nav__wrap {
       grid-template-areas:
         "actions actions"
-        "logo burger";
+        "logo logo";
     }
 
     .header-burger {
       display: block;
       text-align: end;
-      padding-right: 15px;
     }
 
     .header-nav__actions {
