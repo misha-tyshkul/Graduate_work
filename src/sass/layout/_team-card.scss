@@ -5,6 +5,10 @@
 .team-card {
   padding: 80px 160px 60px;
 
+  .swiper-wrapper {
+    padding-bottom: 60px;
+  }
+
   .swiper-pagination-bullet {
     width: 16px;
     height: 16px;
@@ -19,7 +23,7 @@
   }
 
   &__wrap {
-    border-radius: 12px 0px 0px 12px;
+    border-radius: 12px 0 0px 12px;
     overflow: hidden;
 
     &__img {

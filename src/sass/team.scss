@@ -1,11 +1,13 @@
 @use "abstracts/variables" as *;
-@use "abstracts/mixin";
+@use "abstracts/mixin" as *;
 
 @use "base/normalise";
 @use "base/basics";
 @use "base/fonts";
 
 @use "components/burger";
+
+@use "layout/footer";
 
 .header {
   padding: 0 160px;
@@ -38,7 +40,7 @@
         font-weight: 400;
         font-size: 1.714rem;
         line-height: 44px;
-        color: #323264;
+        color: $color-main-regular;
       }
     }
   }
@@ -57,17 +59,17 @@
       font-size: 0.571rem;
       line-height: 15px;
       letter-spacing: 1px;
-      color: #b3b3ba;
+      color: $color-bg-text;
     }
 
     &__lang-link {
       padding: 5px 7px;
       border-radius: 20%;
-      color: #b3b3ba;
+      color: $color-bg-text;
 
       &.active {
         color: white;
-        background-color: #f0145a;
+        background-color: $color-accent;
         border-radius: 8px;
       }
 
@@ -83,7 +85,7 @@
       font-size: 0.762rem;
 
       &-link {
-        color: #b3b3ba;
+        color: $color-bg-text;
       }
 
       &::before {
@@ -91,8 +93,9 @@
         display: inline-block;
         height: 6px;
         width: 6px;
-        background-color: #b3b3ba;
+        background-color: $color-bg-text;
         border-radius: 50%;
+        margin-right: 6px;
         margin-bottom: 3px;
       }
     }
@@ -101,7 +104,7 @@
       font-size: 0.762rem;
 
       &-link {
-        color: #b3b3ba;
+        color: $color-bg-text;
       }
     }
 
@@ -110,13 +113,14 @@
       display: inline-block;
       height: 6px;
       width: 6px;
-      background-color: #b3b3ba;
+      background-color: $color-bg-text;
       border-radius: 50%;
+      margin-right: 6px;
       margin-bottom: 3px;
     }
 
     &__lang-link.active {
-      background-color: #f0145a;
+      background-color: $color-accent;
     }
 
     &-socials::before {
@@ -124,13 +128,14 @@
       display: inline-block;
       height: 6px;
       width: 6px;
-      background-color: #b3b3ba;
+      background-color: $color-bg-text;
       border-radius: 50%;
+      margin-right: 6px;
       margin-bottom: 7px;
     }
 
     &-socials-link svg:hover #facebook {
-      fill: #f0145a;
+      fill: $color-accent;
     }
   }
 
@@ -146,30 +151,259 @@
   }
 
   &__menu-link {
-    color: #24a3ff;
+    color: $color-active-regular;
 
     &.accent {
-      color: #f0145a;
-      border-bottom: 2px solid #f0145a;
+      color: $color-accent;
+      border-bottom: 2px solid $color-accent;
     }
 
     &:hover {
-      color: #f0145a;
+      color: $color-accent;
       padding-bottom: 3px;
-      border-bottom: 2px solid #f0145a;
+      border-bottom: 2px solid $color-accent;
     }
   }
 }
 
 .team-page {
   padding: 0 160px;
+  margin-bottom: 60px;
 
   &__title {
-    padding: 0 120px;
+    margin-top: 60px;
+
+    padding: 60px 120px;
+
     font-size: 1.81rem;
     line-height: 46px;
     background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+  }
+
+  .team-page__item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &-img {
+      margin-bottom: 15px;
+      overflow: hidden;
+      border-radius: 12px;
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    &-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    &-name {
+      font-size: 0.762rem;
+      line-height: 20px;
+
+      &:hover {
+        color: $color-accent;
+        cursor: pointer;
+      }
+    }
+
+    &-position {
+      color: $color-bg-text;
+      font-size: 0.667rem;
+      line-height: 22px;
+    }
+
+    #button-hover:hover {
+      stroke: $color-accent;
+    }
+  }
+}
+
+.footer-container {
+  border: none;
+  padding-top: 0;
+}
+
+@media only screen {
+  .header-burger {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .header {
+    padding: 0 60px;
+  }
+
+  .header-nav__actions {
+    gap: 6px;
+  }
+
+  .header-nav__actions-locations::before {
+    margin-right: 2px;
+  }
+
+  .header-nav__actions-phones::before {
+    margin-right: 2px;
+  }
+
+  .header-nav__actions-phones::before {
+    margin-right: 2px;
+  }
+
+  .team-page {
+    padding: 0 60px;
+
+    &__title {
+      margin: 0;
+      padding: 60px 120px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .header-nav__wrap {
+    grid-template-areas:
+      "actions"
+      "logo"
+      "menu";
+    gap: 30px;
+  }
+
+  .header-nav__menu-list {
+    justify-content: start;
+  }
+
+  .header-nav__actions__locations-link {
+    color: $color-bg-text;
+  }
+
+  .header::after {
+    width: 768px;
+  }
+
+  .team-page {
+    padding: 0 60px;
+
+    &__title {
+      margin: 0;
+      padding: 60px 0;
+    }
+
+    &__content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 60px;
+    }
+  }
+
+  .footer-container {
+    grid-template-areas:
+      "map "
+      "links"
+      "copyright";
+    justify-content: center;
+  }
+
+  .footer-copyright__text {
+    padding: 0 61px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-nav__wrap {
+    grid-template-areas:
+      "actions actions"
+      "logo burger";
+  }
+
+  .header-burger {
+    display: block;
+    text-align: end;
+    padding-right: 15px;
+  }
+
+  .header-nav__actions {
+    background: rgba(245, 245, 250, 0.2);
+    padding: 12px 15px;
+    justify-content: space-between;
+  }
+
+  .header-nav__logo {
+    padding-left: 15px;
+  }
+
+  .header-nav__actions-locations {
+    display: none;
+  }
+
+  .header-nav__actions-socials {
+    display: none;
+  }
+
+  .header-nav__actions-phones::before {
+    display: none;
+  }
+
+  .header-nav__menu {
+    display: none;
+  }
+
+  .header-nav {
+    padding: 0;
+  }
+
+  .header {
+    padding: 0;
+  }
+
+  .header::after {
+    width: 315px;
+  }
+
+  .team-page {
+    padding: 0 30px;
+
+    &__title {
+      margin: 0;
+      padding: 30px 0;
+      font-size: 1.429rem;
+    }
+
+    &__content {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+    }
+  }
+
+  .breadscrumbs-logo {
+    width: 70px;
+  }
+
+  .header-nav__logo .breadscrumbs-item {
+    font-size: 0.952rem;
+    line-height: 24px;
+    padding-top: 10px;
+  }
+
+  .breadscrumbs-slash {
+    width: 12px;
   }
 }

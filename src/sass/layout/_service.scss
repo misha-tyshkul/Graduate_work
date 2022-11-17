@@ -1,6 +1,6 @@
 @use "../abstracts/variables" as *;
 @use "../base/basics";
-@use "../abstracts/mixin";
+@use "../abstracts/mixin" as *;
 
 .service {
   padding: 0 160px 60px;
@@ -39,11 +39,11 @@
       margin-top: 30px;
       margin-bottom: 15px;
 
-      .vector {
-        @import url();
-      }
+      // .vector {
+      //   @include vector;
+      // }
 
-      &:hover {
+      &:hover #vector {
         color: $color-accent;
       }
     }

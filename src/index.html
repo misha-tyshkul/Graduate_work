@@ -7,7 +7,7 @@
     <title>hlegal</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="sass/styles.scss" />
+    <link rel="stylesheet" href="@@webRoot/css/styles.min.css" />
   </head>
   <body>
     <div class="header-container">
@@ -154,7 +154,7 @@
                 <li class="header-nav__menu-item"><a class="header-nav__menu-link" href="#">about us</a></li>
                 <li class="header-nav__menu-item"><a class="header-nav__menu-link" href="#">services</a></li>
                 <li class="header-nav__menu-item">
-                  <a class="header-nav__menu-link" href="pages/team/team.html">team</a>
+                  <a class="header-nav__menu-link" href="pages/team.html">team</a>
                 </li>
                 <li class="header-nav__menu-item"><a class="header-nav__menu-link" href="#">publications</a></li>
                 <li class="header-nav__menu-item"><a class="header-nav__menu-link" href="#">contact</a></li>
@@ -225,12 +225,7 @@
       </div>
 
       <div class="service">
-        <a class="service__title"
-          >Services
-          <svg class="vector">
-            <use xlink:href="#vector"></use>
-          </svg>
-        </a>
+        <a class="service__title">Services > </a>
         <h2 class="service__text">What can we do better than others?</h2>
 
         <div class="service-container">
@@ -246,9 +241,8 @@
           <div class="service-container__item">
             <img class="service-container__icon" src="img/service/support.svg" alt="" />
             <a class="service-container__title" href="#"
-              >Comprehensive daily <br />
-              legal support</a
-            >
+              >Comprehensive daily
+              legal support</a>
             <div class="service-container__text">
               In addition, over time, the work will become the same type and uninteresting for a full-time lawyer. And
               we know very well how difficult it is to find a good candidate with experience in the field of information
@@ -276,7 +270,7 @@
 
           <div class="service-container__item">
             <img class="service-container__icon" src="img/service/protection.svg" alt="" />
-            <a class="service-container__title" href="#">Protection of business, intellectual <br />property</a>
+            <a class="service-container__title" href="#">Protection of business, intellectual property</a>
             <div class="service-container__text">
               And all the other time he will work on new diverse projects, so he will definitely not stop in
               professional development. One way or another, all Axon Partners will work for you instead of a corporate
@@ -467,10 +461,10 @@
 
         <div class="footer-items">
           <a class="footer-items__link" href="https://www.facebook.com/" target="_blank">
-            <svg class="icon shape-codepen">
-              <use xlink:href="#icon-facebook"></use>
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path id="facebook" d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z" fill="#24A3FF"/>
+              </svg>
             </svg>
-            >
           </a>
           <a class="footer-items__tell" href="tel:0800211927">0800 211 927</a>
           <a class="footer-items__mail" href="#">contact@forstudy.space</a>
@@ -492,6 +486,5 @@
       });
     </script>
     <script src="sass/js/test.js"></script>
-    @@include('sections/icon.html')
   </body>
 </html>

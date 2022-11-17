@@ -3,14 +3,14 @@
 @use "base/fonts" as *;
 
 @use "abstracts/variables" as *;
-@use "abstracts/mixin" as *;
+@use "abstracts/mixin";
 
-@use "components/burger" as *;
+@use "components/burger";
 
-@use "layout/header.scss" as *;
-@use "layout/experience.scss" as *;
-@use "layout/service.scss" as *;
-@use "layout/team-card" as *;
-@use "layout/clients" as *;
-@use "layout/publications" as *;
-@use "layout/footer" as *;
+@use "layout/header.scss";
+@use "layout/experience.scss";
+@use "layout/service.scss";
+@use "layout/team-card";
+@use "layout/clients";
+@use "layout/publications";
+@use "layout/footer";
