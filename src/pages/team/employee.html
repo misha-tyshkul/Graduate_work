@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="@@webRoot/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="@@webRoot/css/employee.min.css" />
     <title>team</title>
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="@@webRoot/css/team.min.css" />
   </head>
   <body>
     <header class="header">
@@ -15,8 +15,15 @@
           <div class="header-nav__logo">
             <ul class="breadscrumbs">
               <li class="breadscrumbs-link">
-                <a href="../index.html">
-                  <svg class="breadscrumbs-logo" width="130" height="60" viewBox="0 0 130 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a href="@@webRoot/index.html">
+                  <svg
+                    class="breadscrumbs-logo"
+                    width="130"
+                    height="60"
+                    viewBox="0 0 130 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <g clip-path="url(#clip0_68715_2680)">
                       <path
                         d="M4.95672 0H0V35.7986H4.95672V22.5177C4.95672 20.2709 5.51557 18.4984 6.63326 17.2502C7.75095 16.002 9.2817 15.353 11.1769 15.353C12.8049 15.353 14.1655 15.9521 15.2589 17.1004C16.3523 18.2738 16.9112 19.7466 16.9112 21.5191V35.8236H21.8922V21.5191C21.8922 18.2238 20.9932 15.6276 19.1951 13.6804C17.3971 11.7332 15.0402 10.7596 12.1731 10.7596C11.347 10.7596 10.5209 10.8594 9.71906 11.0841C8.89294 11.3088 8.2369 11.5584 7.70235 11.833C7.16781 12.1076 6.65756 12.4072 6.1959 12.7567C5.73424 13.1062 5.41838 13.3558 5.27259 13.5056C5.1268 13.6554 5.00532 13.7552 4.95672 13.8301V0Z"
@@ -84,7 +91,14 @@
               </li>
 
               <li>
-                <svg class="breadscrumbs-slash" width="21" height="47" viewBox="0 0 21 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  class="breadscrumbs-slash"
+                  width="21"
+                  height="47"
+                  viewBox="0 0 21 47"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
@@ -149,7 +163,9 @@
             <ul class="header-nav__menu-list">
               <li class="header-nav__menu-item"><a class="header-nav__menu-link" href="#">about us</a></li>
               <li class="header-nav__menu-item"><a class="header-nav__menu-link" href="#">services</a></li>
-              <li class="header-nav__menu-item"><a class="header-nav__menu-link accent" href="#">team</a></li>
+              <li class="header-nav__menu-item">
+                <a class="header-nav__menu-link accent" href="team.html">team</a>
+              </li>
               <li class="header-nav__menu-item"><a class="header-nav__menu-link" href="#">publications</a></li>
               <li class="header-nav__menu-item"><a class="header-nav__menu-link" href="#">contact</a></li>
             </ul>
@@ -166,7 +182,7 @@
               <ul class="burger-menu">
                 <li class="burger-item"><a class="burger-link" href="#">about us</a></li>
                 <li class="burger-item"><a class="burger-link" href="#">services</a></li>
-                <li class="burger-item"><a class="burger-link active" href="#">team</a></li>
+                <li class="burger-item"><a class="burger-link active" href="@@webRoot/team/team.html">team</a></li>
                 <li class="burger-item"><a class="burger-link" href="#">publications</a></li>
                 <li class="burger-item"><a class="burger-link" href="#">contact</a></li>
               </ul>
@@ -192,119 +208,50 @@
       </nav>
     </header>
 
-    <main class="team-page">
-      <h1 class="team-page__title">
-        We are used to taking responsibility and always guarantee honest, timely assistance, even in situations where
-        most are powerless.
-      </h1>
-      <div class="team-page__content">
-        <div class="team-page__item">
-          <div class="team-page__item-img"><img src="../img/team/team-1.jpg" alt="" /></div>
-          <div class="team-page__item-wrap">
-            <div class="team-page__item-text">
-              <h4 class="team-page__item-name">Alexander Alexandrovsky</h4>
-              <div class="team-page__item-position">Managing partner</div>
-            </div>
-            <div class="team-page__item-btn">
-              <a class="team-page__item-button" href="#">
-                <svg class="vector" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="16" cy="16" r="16" fill="#F5F5FA" />
-                  <path id="button-hover"d="M13.5 23.5L20.5 16.5L13.5 9.5" stroke="#24A3FF" stroke-width="2" />
-                </svg>
-              </a>
-            </div>
-          </div>
+    <main class="main">
+      <div class="main-wrap">
+        <div class="main-wrap-img">
+          <img class="main-img" src="@@webRoot/img/team/team-5.jpg" alt="#" />
         </div>
+          <div class="main-profile">
+            <h1 class="main-profile__title">Oksana Kobzar</h1>
+            <ul class="main-profile__menu">
+              <li class="main-profile__menu-item">Equity partner, Attorney-at-law</li>
+              <li class="main-profile__menu-item">
+                <a class="main-profile__menu-link" href="#">kobzar@forstudy.space</a>
+              </li>
+              <li class="main-profile__menu-item"><a class="main-profile__menu-link" href="#">LinkedIn profile</a></li>
+            </ul>
+          </div>
 
-        <div class="team-page__item">
-          <div class="team-page__item-img"><img src="@@webRoot/img/team/team-2.jpg" alt="" /></div>
-          <div class="team-page__item-wrap">
-            <div class="team-page__item-text">
-              <h4 class="team-page__item-name">Евгений Патриков</h4>
-              <div class="team-page__item-position">Equity partner, Attorney-at-law</div>
+          <div class="main-content">
+            <div class="main-content-text">
+              <p>
+                Oksana heads the practice of international trade and shipping. He specializes in resolving disputes
+                related to the purchase and sale of raw materials and transportation of goods by sea.
+              </p>
+              <p>
+                Desis represents the interests of shipowners, freight forwarders, cargo owners, shipping agents,
+                container lines, as well as international banks and P&I clubs.
+              </p>
             </div>
-            <div class="team-page__item-btn">
-              <a class="team-page__item-button" href="#">
-                <svg class="vector" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="16" cy="16" r="16" fill="#F5F5FA" />
-                  <path id="button-hover"d="M13.5 23.5L20.5 16.5L13.5 9.5" stroke="#24A3FF" stroke-width="2" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <div class="team-page__item">
-          <div class="team-page__item-img"><img src="../img/team/team-3.jpg" alt="" /></div>
-          <div class="team-page__item-wrap">
-            <div class="team-page__item-text">
-              <h4 class="team-page__item-name">Vladislav Melnik</h4>
-              <div class="team-page__item-position">Associate</div>
+            <div class="main-content-frame">
+              <h3 class="main-content-frame__title">Education</h3>
+              <p class="main-content-frame__text">National University "Odessa Law Academy", Master of Law.</p>
             </div>
-            <div class="team-page__item-btn">
-              <a class="team-page__item-button" href="#">
-                <svg class="vector" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="16" cy="16" r="16" fill="#F5F5FA" />
-                  <path id="button-hover"d="M13.5 23.5L20.5 16.5L13.5 9.5" stroke="#24A3FF" stroke-width="2" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <div class="team-page__item">
-          <div class="team-page__item-img"><img src="../img/team/team-4.jpg" alt="" /></div>
-          <div class="team-page__item-wrap">
-            <div class="team-page__item-text">
-              <h4 class="team-page__item-name">Sergey Binn</h4>
-              <div class="team-page__item-position">Associate</div>
-            </div>
-            <div class="team-page__item-btn">
-              <a class="team-page__item-button" href="#">
-                <svg class="vector" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="16" cy="16" r="16" fill="#F5F5FA" />
-                  <path id="button-hover"d="M13.5 23.5L20.5 16.5L13.5 9.5" stroke="#24A3FF" stroke-width="2" />
-                </svg>
-              </a>
+            <div class="main-content-frame">
+              <h3 class="main-content-frame__title">Experience</h3>
+              <p class="main-content-frame__text">
+                Her professional experience includes resolving disputes under English law and representing interests in
+                foreign commercial arbitrations such as GAFTA, FOSFA and LMAA. Danilo also represents the interests of
+                clients in the state courts of Ukraine on similar disputes, as well as in the ICAC and IAC at the CCI of
+                Ukraine
+              </p>
             </div>
           </div>
-        </div>
 
-        <div class="team-page__item">
-          <div class="team-page__item-img"><img src="../img/team/team-5.jpg" alt="" /></div>
-          <div class="team-page__item-wrap">
-            <div class="team-page__item-text">
-              <h4 class="team-page__item-name">Oksana Kobzar</h4>
-              <div class="team-page__item-position">Equity partner, Attorney-at-law</div>
-            </div>
-            <div class="team-page__item-btn">
-              <a class="team-page__item-button" href="#">
-                <svg class="vector" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="16" cy="16" r="16" fill="#F5F5FA" />
-                  <path id="button-hover"d="M13.5 23.5L20.5 16.5L13.5 9.5" stroke="#24A3FF" stroke-width="2" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="team-page__item">
-          <div class="team-page__item-img"><img src="../img/team/team-6.jpg" alt="" /></div>
-          <div class="team-page__item-wrap">
-            <div class="team-page__item-text">
-              <h4 class="team-page__item-name">Julia Wolk</h4>
-              <div class="team-page__item-position">Associate, Attorney-at-law</div>
-            </div>
-            <div class="team-page__item-btn">
-              <a class="team-page__item-button" href="#">
-                <svg class="vector" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="16" cy="16" r="16" fill="#F5F5FA" />
-                  <path id="button-hover"d="M13.5 23.5L20.5 16.5L13.5 9.5" stroke="#24A3FF" stroke-width="2" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </main>
 
@@ -331,6 +278,7 @@
         </div>
       </div>
     </footer>
+
     <script src="@@webRoot/js/test.js"></script>
   </body>
 </html>

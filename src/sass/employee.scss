@@ -166,85 +166,115 @@
   }
 
   .burger-wrap {
+    display: none;
     background: $color-bg-text;
   }
 }
 
-.team-page {
-  padding: 0 160px;
-  margin-bottom: 60px;
+.main {
+  padding: 60px 280px;
 
-  &__title {
-    margin-top: 60px;
-
-    padding: 60px 120px;
-
-    font-size: 1.81rem;
-    line-height: 46px;
-    background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  &__content {
+  &-wrap {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "img title"
+      "img content";
     gap: 60px;
   }
 
-  .team-page__item {
+  &-wrap-img {
+    overflow: hidden;
+    grid-area: img;
+  }
+
+  &-img {
+    object-fit: cover;
+    width: 400px;
+    height: 500px;
+    border-radius: 12px;
+  }
+
+  &-profile {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    grid-area: title;
 
-    &-img {
-      margin-bottom: 15px;
-      overflow: hidden;
-      border-radius: 12px;
+    &__title {
+      margin: 0;
+      font-size: 1.81rem;
+      line-height: 46px;
+      color: $color-accent;
+    }
 
-      img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
+    &__menu {
+      display: flex;
+      gap: 10px;
+      font-weight: 400;
+
+      &-item {
+        font-size: 0.667rem;
+        line-height: 22px;
+        color: $color-bg-text;
+      }
+
+      &-link {
+        font-size: 0.762rem;
+        line-height: 20px;
+        color: $color-active-regular;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          height: 6px;
+          width: 6px;
+          background-color: $color-bg-separator;
+          border-radius: 50%;
+          margin-right: 10px;
+          margin-bottom: 3px;
+        }
+
+        &:hover {
+          color: $color-accent;
+        }
       }
     }
+  }
 
-    &-wrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 0.762rem;
+    font-weight: 400;
+    line-height: 26px;
+    padding-top: 30px;
+    border-top: 4px solid $color-bg-separator;
+    grid-area: content;
 
     &-text {
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 15px;
     }
 
-    &-name {
-      font-size: 0.762rem;
-      line-height: 20px;
+    &-frame {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
 
-      &:hover {
-        color: $color-accent;
-        cursor: pointer;
+      &__title {
+        font-size: 0.667rem;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $color-main-regular;
       }
-    }
-
-    &-position {
-      color: $color-bg-text;
-      font-size: 0.667rem;
-      line-height: 22px;
-    }
-
-    .vector:hover #button-hover {
-      stroke: $color-accent;
     }
   }
 }
-
 .footer-container {
-  border: none;
+  border-top: none;
   padding-top: 0;
 }
 
@@ -275,12 +305,12 @@
     margin-right: 2px;
   }
 
-  .team-page {
-    padding: 0 60px;
+  .main {
+    padding: 180px 60px;
 
-    &__title {
-      margin: 0;
-      padding: 60px 120px;
+    &-img {
+      width: 315px;
+      height: 375px;
     }
   }
 }
@@ -306,17 +336,30 @@
     width: 768px;
   }
 
-  .team-page {
-    padding: 0 60px;
+  .main {
+    padding: 60px 60px;
 
-    &__title {
-      margin: 0;
-      padding: 60px 0;
+    &-wrap {
+      gap: 30px;
+      grid-template-areas:
+        "img title"
+        "content content";
     }
 
-    &__content {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 60px;
+    &-wrap-img {
+      height: 375px;
+    }
+
+    &-profile {
+      justify-content: center;
+
+      &__menu {
+        flex-direction: column;
+
+        &-link::before {
+          content: none;
+        }
+      }
     }
   }
 
@@ -337,13 +380,12 @@
   .header-nav__wrap {
     grid-template-areas:
       "actions actions"
-      "logo burger";
+      "logo logo";
   }
 
   .header-burger {
     display: block;
     text-align: end;
-    padding-right: 15px;
   }
 
   .header-nav__actions {
@@ -382,34 +424,26 @@
 
   .header::after {
     width: 315px;
+    top: 43%;
   }
 
-  .team-page {
-    padding: 0 30px;
+  .main {
+    padding: 30px 30px;
 
-    &__title {
-      margin: 0;
-      padding: 30px 0;
-      font-size: 1.429rem;
-    }
-
-    &__content {
-      grid-template-columns: repeat(1, 1fr);
+    &-wrap {
+      grid-template-areas:
+        "img"
+        "title"
+        "content";
       gap: 30px;
     }
-  }
 
-  .breadscrumbs-logo {
-    width: 70px;
-  }
+    &-profile__menu {
+      flex-direction: column;
+    }
 
-  .header-nav__logo .breadscrumbs-item {
-    font-size: 0.952rem;
-    line-height: 24px;
-    padding-top: 10px;
-  }
-
-  .breadscrumbs-slash {
-    width: 12px;
+    &-profile__menu-link::before {
+      content: none;
+    }
   }
 }
