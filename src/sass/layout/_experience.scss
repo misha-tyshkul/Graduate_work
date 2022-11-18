@@ -88,12 +88,18 @@
     padding-right: 0;
     padding-bottom: 30px;
     width: 100%;
+    overflow: hidden;
 
     &__menu {
       flex-flow: row nowrap;
       min-width: 100%;
       overflow-x: auto;
       white-space: nowrap;
+
+      &-link {
+        font-size: 1.429rem;
+        line-height: 37px;
+      }
 
       scrollbar-width: none;
       &::-webkit-scrollbar {

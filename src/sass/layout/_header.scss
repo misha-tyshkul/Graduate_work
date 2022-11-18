@@ -8,7 +8,6 @@
   background: $color-gradient-supersoft;
   border-radius: 0px 0px 12px 12px;
   color: white;
-  overflow-x: hidden;
 
   &::before {
     position: absolute;
@@ -42,6 +41,25 @@
     padding: 0 160px;
     margin: 0 auto;
 
+    &-bcg {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 87.234vh;
+      transform: translate(-50%);
+
+      height: 100%;
+      width: 100%;
+      max-width: 850px;
+
+      .header-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
     &__btn-scroll {
       position: absolute;
       left: 50%;
@@ -49,14 +67,14 @@
       transform: translate(-50%);
     }
 
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 87.234vh;
-      transform: translate(-50%);
-      content: url(../img/h.svg);
-    }
+    // &::before {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 50%;
+    //   width: 87.234vh;
+    //   transform: translate(-50%);
+    //   content: url(../img/h.svg);
+    // }
 
     &::after {
       position: absolute;
@@ -293,6 +311,7 @@
 
     .header::after {
       width: 315px;
+      top: 43%;
     }
   }
 }
